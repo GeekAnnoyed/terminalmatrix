@@ -1,27 +1,22 @@
-# terminalmatrix
+# Dactyl Manuform (5x6) with 6 thumb cluster
 
-![terminalmatrix](imgur.com image replace me!)
+The [Dactyl-Manuform](https://github.com/tshort/dactyl-keyboard) is a split curved keyboard based on the design of [adereth dactyl](https://github.com/adereth/dactyl-keyboard) and thumb cluster design of the [manuform](https://geekhack.org/index.php?topic=46015.0) keyboard, the hardware is similar to the let's split keyboard. All information needed for making one is in the first link.
 
-*A short description of the keyboard/project*
+![Imgur](https://i.imgur.com/MvtMG1vh.png)
 
-* Keyboard Maintainer: [Richard Thomas](https://github.com/geekannoyed)
-* Hardware Supported: *The PCBs, controllers supported*
-* Hardware Availability: *Links to where you can find this hardware*
+* Keyboard Maintainer: fgoodwin
+* Hardware Supported: Pro Micro Micro Micro USB or USB C
 
 Make example for this keyboard (after setting up your build environment):
 
-    make terminalmatrix:default
+    make handwired/dactyl_manuform/5x6_6:default
 
 Flashing example for this keyboard:
 
-    make terminalmatrix:default:flash
+    make handwired/dactyl_manuform/5x6_6:default:flash
 
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
 
-## Bootloader
-
-Enter the bootloader in 3 ways:
-
-* **Bootmagic reset**: Hold down the key at (0,0) in the matrix (usually the top left key or Escape) and plug in the keyboard
-* **Physical reset button**: Briefly press the button on the back of the PCB - some may have pads you must short instead
-* **Keycode in layout**: Press the key mapped to `QK_BOOT` if it is available
+Enter the bootloader in 2 ways:
+**Physical reset button**: Briefly press the reset button on the bottom of the case, or bridge the reset and ground pins momentarily on the pro micro
+**Keycode in layout**: Press the key mapped to `QK_BOOT` (by default hold down `MO(1)` and press the left most key in row 5 on the left hand half of the keyboard)
